@@ -1,0 +1,695 @@
+The system is: Linux - 3.12.21-gentoo-r1 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/pikachu123/SDL_example/CMakeFiles/2.8.12.2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/pikachu123/SDL_example/CMakeFiles/2.8.12.2/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1745335860/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1745335860.dir/build.make CMakeFiles/cmTryCompileExec1745335860.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1745335860.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1745335860.dir/testCCompiler.c.o   -c /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec1745335860
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1745335860.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1745335860.dir/testCCompiler.c.o  -o cmTryCompileExec1745335860 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec360114381/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec360114381.dir/build.make CMakeFiles/cmTryCompileExec360114381.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec360114381.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec360114381.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec360114381
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec360114381.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTryCompileExec360114381.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec360114381 -rdynamic  
+使用內建 specs。
+COLLECT_GCC=/usr/x86_64-pc-linux-gnu/gcc-bin/4.7.3/gcc
+COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-pc-linux-gnu/4.7.3/lto-wrapper
+目的：x86_64-pc-linux-gnu
+配置為：/var/tmp/portage/sys-devel/gcc-4.7.3-r1/work/gcc-4.7.3/configure --host=x86_64-pc-linux-gnu --build=x86_64-pc-linux-gnu --prefix=/usr --bindir=/usr/x86_64-pc-linux-gnu/gcc-bin/4.7.3 --includedir=/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/include --datadir=/usr/share/gcc-data/x86_64-pc-linux-gnu/4.7.3 --mandir=/usr/share/gcc-data/x86_64-pc-linux-gnu/4.7.3/man --infodir=/usr/share/gcc-data/x86_64-pc-linux-gnu/4.7.3/info --with-gxx-include-dir=/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/include/g++-v4 --with-python-dir=/share/gcc-data/x86_64-pc-linux-gnu/4.7.3/python --enable-languages=c,c++,fortran --enable-obsolete --enable-secureplt --disable-werror --with-system-zlib --enable-nls --without-included-gettext --enable-checking=release --with-bugurl=https://bugs.gentoo.org/ --with-pkgversion='Gentoo 4.7.3-r1 p1.4, pie-0.5.5' --enable-libstdcxx-time --enable-shared --enable-threads=posix --enable-__cxa_atexit --enable-clocale=gnu --enable-multilib --with-multilib-list=m32,m64 --disable-altivec --disable-fixed-point --enable-targets=all --disable-libgcj --enable-libgomp --disable-libmudflap --disable-libssp --enable-lto --without-cloog --without-ppl
+執行緒模型：posix
+gcc version 4.7.3 (Gentoo 4.7.3-r1 p1.4, pie-0.5.5) 
+COMPILER_PATH=/usr/libexec/gcc/x86_64-pc-linux-gnu/4.7.3/:/usr/libexec/gcc/x86_64-pc-linux-gnu/4.7.3/:/usr/libexec/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../x86_64-pc-linux-gnu/bin/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../x86_64-pc-linux-gnu/lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec360114381' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-pc-linux-gnu/4.7.3/collect2 --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec360114381 /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/crtbegin.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3 -L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../x86_64-pc-linux-gnu/lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../.. CMakeFiles/cmTryCompileExec360114381.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/crtend.o /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/crtn.o
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/gmake "cmTryCompileExec360114381/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec360114381.dir/build.make CMakeFiles/cmTryCompileExec360114381.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec360114381.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec360114381.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec360114381]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec360114381.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTryCompileExec360114381.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec360114381 -rdynamic  ]
+  ignore line: [使用內建 specs。]
+  ignore line: [COLLECT_GCC=/usr/x86_64-pc-linux-gnu/gcc-bin/4.7.3/gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-pc-linux-gnu/4.7.3/lto-wrapper]
+  ignore line: [目的：x86_64-pc-linux-gnu]
+  ignore line: [配置為：/var/tmp/portage/sys-devel/gcc-4.7.3-r1/work/gcc-4.7.3/configure --host=x86_64-pc-linux-gnu --build=x86_64-pc-linux-gnu --prefix=/usr --bindir=/usr/x86_64-pc-linux-gnu/gcc-bin/4.7.3 --includedir=/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/include --datadir=/usr/share/gcc-data/x86_64-pc-linux-gnu/4.7.3 --mandir=/usr/share/gcc-data/x86_64-pc-linux-gnu/4.7.3/man --infodir=/usr/share/gcc-data/x86_64-pc-linux-gnu/4.7.3/info --with-gxx-include-dir=/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/include/g++-v4 --with-python-dir=/share/gcc-data/x86_64-pc-linux-gnu/4.7.3/python --enable-languages=c,c++,fortran --enable-obsolete --enable-secureplt --disable-werror --with-system-zlib --enable-nls --without-included-gettext --enable-checking=release --with-bugurl=https://bugs.gentoo.org/ --with-pkgversion='Gentoo 4.7.3-r1 p1.4, pie-0.5.5' --enable-libstdcxx-time --enable-shared --enable-threads=posix --enable-__cxa_atexit --enable-clocale=gnu --enable-multilib --with-multilib-list=m32,m64 --disable-altivec --disable-fixed-point --enable-targets=all --disable-libgcj --enable-libgomp --disable-libmudflap --disable-libssp --enable-lto --without-cloog --without-ppl]
+  ignore line: [執行緒模型：posix]
+  ignore line: [gcc version 4.7.3 (Gentoo 4.7.3-r1 p1.4, pie-0.5.5) ]
+  ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-pc-linux-gnu/4.7.3/:/usr/libexec/gcc/x86_64-pc-linux-gnu/4.7.3/:/usr/libexec/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../x86_64-pc-linux-gnu/bin/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../x86_64-pc-linux-gnu/lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec360114381' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/libexec/gcc/x86_64-pc-linux-gnu/4.7.3/collect2 --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec360114381 /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/crtbegin.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3 -L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../x86_64-pc-linux-gnu/lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../.. CMakeFiles/cmTryCompileExec360114381.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/crtend.o /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/crtn.o]
+    arg [/usr/libexec/gcc/x86_64-pc-linux-gnu/4.7.3/collect2] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec360114381] ==> ignore
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3]
+    arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../x86_64-pc-linux-gnu/lib] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../x86_64-pc-linux-gnu/lib]
+    arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../..]
+    arg [CMakeFiles/cmTryCompileExec360114381.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3] ==> [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3]
+  collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64] ==> [/usr/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../x86_64-pc-linux-gnu/lib] ==> [/usr/x86_64-pc-linux-gnu/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../..] ==> [/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3;/usr/lib64;/lib64;/usr/x86_64-pc-linux-gnu/lib;/usr/lib]
+  implicit fwks: []
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec261165726/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec261165726.dir/build.make CMakeFiles/cmTryCompileExec261165726.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec261165726.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec261165726.dir/testCXXCompiler.cxx.o -c /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec261165726
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec261165726.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec261165726.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec261165726 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec66458926/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec66458926.dir/build.make CMakeFiles/cmTryCompileExec66458926.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec66458926.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec66458926.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec66458926
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec66458926.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTryCompileExec66458926.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec66458926 -rdynamic  
+使用內建 specs。
+COLLECT_GCC=/usr/x86_64-pc-linux-gnu/gcc-bin/4.7.3/c++
+COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-pc-linux-gnu/4.7.3/lto-wrapper
+目的：x86_64-pc-linux-gnu
+配置為：/var/tmp/portage/sys-devel/gcc-4.7.3-r1/work/gcc-4.7.3/configure --host=x86_64-pc-linux-gnu --build=x86_64-pc-linux-gnu --prefix=/usr --bindir=/usr/x86_64-pc-linux-gnu/gcc-bin/4.7.3 --includedir=/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/include --datadir=/usr/share/gcc-data/x86_64-pc-linux-gnu/4.7.3 --mandir=/usr/share/gcc-data/x86_64-pc-linux-gnu/4.7.3/man --infodir=/usr/share/gcc-data/x86_64-pc-linux-gnu/4.7.3/info --with-gxx-include-dir=/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/include/g++-v4 --with-python-dir=/share/gcc-data/x86_64-pc-linux-gnu/4.7.3/python --enable-languages=c,c++,fortran --enable-obsolete --enable-secureplt --disable-werror --with-system-zlib --enable-nls --without-included-gettext --enable-checking=release --with-bugurl=https://bugs.gentoo.org/ --with-pkgversion='Gentoo 4.7.3-r1 p1.4, pie-0.5.5' --enable-libstdcxx-time --enable-shared --enable-threads=posix --enable-__cxa_atexit --enable-clocale=gnu --enable-multilib --with-multilib-list=m32,m64 --disable-altivec --disable-fixed-point --enable-targets=all --disable-libgcj --enable-libgomp --disable-libmudflap --disable-libssp --enable-lto --without-cloog --without-ppl
+執行緒模型：posix
+gcc version 4.7.3 (Gentoo 4.7.3-r1 p1.4, pie-0.5.5) 
+COMPILER_PATH=/usr/libexec/gcc/x86_64-pc-linux-gnu/4.7.3/:/usr/libexec/gcc/x86_64-pc-linux-gnu/4.7.3/:/usr/libexec/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../x86_64-pc-linux-gnu/bin/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../x86_64-pc-linux-gnu/lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec66458926' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-pc-linux-gnu/4.7.3/collect2 --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec66458926 /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/crtbegin.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3 -L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../x86_64-pc-linux-gnu/lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../.. CMakeFiles/cmTryCompileExec66458926.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/crtend.o /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/crtn.o
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/gmake "cmTryCompileExec66458926/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec66458926.dir/build.make CMakeFiles/cmTryCompileExec66458926.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec66458926.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec66458926.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec66458926]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec66458926.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTryCompileExec66458926.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec66458926 -rdynamic  ]
+  ignore line: [使用內建 specs。]
+  ignore line: [COLLECT_GCC=/usr/x86_64-pc-linux-gnu/gcc-bin/4.7.3/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-pc-linux-gnu/4.7.3/lto-wrapper]
+  ignore line: [目的：x86_64-pc-linux-gnu]
+  ignore line: [配置為：/var/tmp/portage/sys-devel/gcc-4.7.3-r1/work/gcc-4.7.3/configure --host=x86_64-pc-linux-gnu --build=x86_64-pc-linux-gnu --prefix=/usr --bindir=/usr/x86_64-pc-linux-gnu/gcc-bin/4.7.3 --includedir=/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/include --datadir=/usr/share/gcc-data/x86_64-pc-linux-gnu/4.7.3 --mandir=/usr/share/gcc-data/x86_64-pc-linux-gnu/4.7.3/man --infodir=/usr/share/gcc-data/x86_64-pc-linux-gnu/4.7.3/info --with-gxx-include-dir=/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/include/g++-v4 --with-python-dir=/share/gcc-data/x86_64-pc-linux-gnu/4.7.3/python --enable-languages=c,c++,fortran --enable-obsolete --enable-secureplt --disable-werror --with-system-zlib --enable-nls --without-included-gettext --enable-checking=release --with-bugurl=https://bugs.gentoo.org/ --with-pkgversion='Gentoo 4.7.3-r1 p1.4, pie-0.5.5' --enable-libstdcxx-time --enable-shared --enable-threads=posix --enable-__cxa_atexit --enable-clocale=gnu --enable-multilib --with-multilib-list=m32,m64 --disable-altivec --disable-fixed-point --enable-targets=all --disable-libgcj --enable-libgomp --disable-libmudflap --disable-libssp --enable-lto --without-cloog --without-ppl]
+  ignore line: [執行緒模型：posix]
+  ignore line: [gcc version 4.7.3 (Gentoo 4.7.3-r1 p1.4, pie-0.5.5) ]
+  ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-pc-linux-gnu/4.7.3/:/usr/libexec/gcc/x86_64-pc-linux-gnu/4.7.3/:/usr/libexec/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../x86_64-pc-linux-gnu/bin/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../x86_64-pc-linux-gnu/lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec66458926' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/libexec/gcc/x86_64-pc-linux-gnu/4.7.3/collect2 --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec66458926 /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/crtbegin.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3 -L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../x86_64-pc-linux-gnu/lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../.. CMakeFiles/cmTryCompileExec66458926.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/crtend.o /usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/crtn.o]
+    arg [/usr/libexec/gcc/x86_64-pc-linux-gnu/4.7.3/collect2] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec66458926] ==> ignore
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3]
+    arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../x86_64-pc-linux-gnu/lib] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../x86_64-pc-linux-gnu/lib]
+    arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../..]
+    arg [CMakeFiles/cmTryCompileExec66458926.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64/crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3] ==> [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3]
+  collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../lib64] ==> [/usr/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../../../x86_64-pc-linux-gnu/lib] ==> [/usr/x86_64-pc-linux-gnu/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3/../../..] ==> [/usr/lib]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/usr/lib/gcc/x86_64-pc-linux-gnu/4.7.3;/usr/lib64;/lib64;/usr/x86_64-pc-linux-gnu/lib;/usr/lib]
+  implicit fwks: []
+
+
+Determining if the function XOpenDisplay exists in the /usr/lib64/libX11.so;/usr/lib64/libXext.so passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2701646834/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2701646834.dir/build.make CMakeFiles/cmTryCompileExec2701646834.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2701646834.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec2701646834.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2701646834
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2701646834.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec2701646834.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2701646834 -rdynamic -lX11 -lXext 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec570131301/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec570131301.dir/build.make CMakeFiles/cmTryCompileExec570131301.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec570131301.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec570131301.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec570131301
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec570131301.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec570131301.dir/CheckFunctionExists.c.o  -o cmTryCompileExec570131301 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1088124786/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1088124786.dir/build.make CMakeFiles/cmTryCompileExec1088124786.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1088124786.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec1088124786.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1088124786
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1088124786.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec1088124786.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1088124786 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3493512085/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3493512085.dir/build.make CMakeFiles/cmTryCompileExec3493512085.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3493512085.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec3493512085.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3493512085
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3493512085.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec3493512085.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3493512085 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2372678601/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2372678601.dir/build.make CMakeFiles/cmTryCompileExec2372678601.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2372678601.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec2372678601.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2372678601
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2372678601.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec2372678601.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2372678601 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2012901364/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2012901364.dir/build.make CMakeFiles/cmTryCompileExec2012901364.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2012901364.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec2012901364.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2012901364
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2012901364.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec2012901364.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2012901364 -rdynamic -lICE 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function XOpenDisplay exists in the /usr/lib64/libX11.so;/usr/lib64/libXext.so passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2013682708/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2013682708.dir/build.make CMakeFiles/cmTryCompileExec2013682708.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2013682708.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec2013682708.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2013682708
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2013682708.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec2013682708.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2013682708 -rdynamic -lX11 -lXext 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec4083069968/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4083069968.dir/build.make CMakeFiles/cmTryCompileExec4083069968.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4083069968.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec4083069968.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4083069968
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4083069968.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec4083069968.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4083069968 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3573329158/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3573329158.dir/build.make CMakeFiles/cmTryCompileExec3573329158.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3573329158.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec3573329158.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3573329158
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3573329158.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec3573329158.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3573329158 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2571516973/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2571516973.dir/build.make CMakeFiles/cmTryCompileExec2571516973.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2571516973.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec2571516973.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2571516973
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2571516973.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec2571516973.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2571516973 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2632616274/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2632616274.dir/build.make CMakeFiles/cmTryCompileExec2632616274.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2632616274.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec2632616274.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2632616274
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2632616274.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec2632616274.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2632616274 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3594815440/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3594815440.dir/build.make CMakeFiles/cmTryCompileExec3594815440.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3594815440.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec3594815440.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3594815440
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3594815440.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec3594815440.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3594815440 -rdynamic -lICE 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function XOpenDisplay exists in the /usr/lib64/libX11.so;/usr/lib64/libXext.so passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec954023272/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec954023272.dir/build.make CMakeFiles/cmTryCompileExec954023272.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec954023272.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec954023272.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec954023272
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec954023272.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec954023272.dir/CheckFunctionExists.c.o  -o cmTryCompileExec954023272 -rdynamic -lX11 -lXext 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec572390605/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec572390605.dir/build.make CMakeFiles/cmTryCompileExec572390605.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec572390605.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec572390605.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec572390605
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec572390605.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec572390605.dir/CheckFunctionExists.c.o  -o cmTryCompileExec572390605 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3812582250/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3812582250.dir/build.make CMakeFiles/cmTryCompileExec3812582250.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3812582250.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec3812582250.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3812582250
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3812582250.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec3812582250.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3812582250 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1717701014/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1717701014.dir/build.make CMakeFiles/cmTryCompileExec1717701014.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1717701014.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec1717701014.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1717701014
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1717701014.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec1717701014.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1717701014 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec4012521867/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4012521867.dir/build.make CMakeFiles/cmTryCompileExec4012521867.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4012521867.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec4012521867.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4012521867
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4012521867.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec4012521867.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4012521867 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3611867516/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3611867516.dir/build.make CMakeFiles/cmTryCompileExec3611867516.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3611867516.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec3611867516.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3611867516
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3611867516.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec3611867516.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3611867516 -rdynamic -lICE 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function XOpenDisplay exists in the /usr/lib64/libX11.so;/usr/lib64/libXext.so passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec310370325/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec310370325.dir/build.make CMakeFiles/cmTryCompileExec310370325.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec310370325.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec310370325.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec310370325
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec310370325.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec310370325.dir/CheckFunctionExists.c.o  -o cmTryCompileExec310370325 -rdynamic -lX11 -lXext 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3093731714/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3093731714.dir/build.make CMakeFiles/cmTryCompileExec3093731714.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3093731714.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec3093731714.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3093731714
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3093731714.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec3093731714.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3093731714 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec155587192/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec155587192.dir/build.make CMakeFiles/cmTryCompileExec155587192.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec155587192.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec155587192.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec155587192
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec155587192.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec155587192.dir/CheckFunctionExists.c.o  -o cmTryCompileExec155587192 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1843551921/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1843551921.dir/build.make CMakeFiles/cmTryCompileExec1843551921.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1843551921.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec1843551921.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1843551921
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1843551921.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec1843551921.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1843551921 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3261302600/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3261302600.dir/build.make CMakeFiles/cmTryCompileExec3261302600.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3261302600.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec3261302600.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3261302600
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3261302600.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec3261302600.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3261302600 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec298536890/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec298536890.dir/build.make CMakeFiles/cmTryCompileExec298536890.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec298536890.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec298536890.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec298536890
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec298536890.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec298536890.dir/CheckFunctionExists.c.o  -o cmTryCompileExec298536890 -rdynamic -lICE 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function XOpenDisplay exists in the /usr/lib64/libX11.so;/usr/lib64/libXext.so passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3514950909/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3514950909.dir/build.make CMakeFiles/cmTryCompileExec3514950909.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3514950909.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec3514950909.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3514950909
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3514950909.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec3514950909.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3514950909 -rdynamic -lX11 -lXext 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3291776982/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3291776982.dir/build.make CMakeFiles/cmTryCompileExec3291776982.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3291776982.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec3291776982.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3291776982
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3291776982.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec3291776982.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3291776982 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3201708378/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3201708378.dir/build.make CMakeFiles/cmTryCompileExec3201708378.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3201708378.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec3201708378.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3201708378
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3201708378.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec3201708378.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3201708378 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3055676881/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3055676881.dir/build.make CMakeFiles/cmTryCompileExec3055676881.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3055676881.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec3055676881.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3055676881
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3055676881.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec3055676881.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3055676881 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec4278744182/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4278744182.dir/build.make CMakeFiles/cmTryCompileExec4278744182.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4278744182.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec4278744182.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4278744182
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4278744182.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec4278744182.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4278744182 -rdynamic 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec362540276/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec362540276.dir/build.make CMakeFiles/cmTryCompileExec362540276.dir/build
+gmake[1]: Entering directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec362540276.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec362540276.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec362540276
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec362540276.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec362540276.dir/CheckFunctionExists.c.o  -o cmTryCompileExec362540276 -rdynamic -lICE 
+gmake[1]: Leaving directory `/home/pikachu123/SDL_example/CMakeFiles/CMakeTmp'
+
+

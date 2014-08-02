@@ -1,0 +1,13 @@
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
+find_package(X11 REQUIRED)
+include_directories(${GTK3_INCLUDE_DIRS} ${X11_INCLUDE_DIR})
+link_directories(${GTK3_LIBRARY_DIRS} ${X11_LIBRARY_DIR})
+add_definitions(${GTK3_CFLAGS_OTHER} ${X11_CFLAGS_OTHER})
+add_executable(gtk_ex HelloWorld2.cpp)
+add_executable(gtk_ex1 main.cpp)
+# Link the target to the GTK+ libraries
+target_link_libraries(gtk_ex ${LIBRARIES} ${GTK3_LIBRARIES} ${X11_LIBRARIES})
+set_target_properties(gtk_ex PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+target_link_libraries(gtk_ex1 ${LIBRARIES} ${GTK3_LIBRARIES} ${X11_LIBRARIES})
+set_target_properties(gtk_ex1 PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
