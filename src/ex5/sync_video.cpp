@@ -132,7 +132,11 @@ void clicked(GtkWidget *widget, GdkEventKey *event, gpointer data) {
          printf("dclicked\n");
          if (!is->is_fullscreen) {
             gtk_window_fullscreen(GTK_WINDOW(is->gtkwindow));
+<<<<<<< HEAD
             //int w, h;
+=======
+            int w, h;
+>>>>>>> 02daf5209c9a9b70d5c80abb00524633ce4f2082
 
             // SDL_GetRendererOutputSize(is->renderer, &w, &h);
             // SDL_DestroyRenderer(renderer);
@@ -145,7 +149,11 @@ void clicked(GtkWidget *widget, GdkEventKey *event, gpointer data) {
          } else {
 
             gtk_window_unfullscreen(GTK_WINDOW(is->gtkwindow));
+<<<<<<< HEAD
             //int w, h;
+=======
+            int w, h;
+>>>>>>> 02daf5209c9a9b70d5c80abb00524633ce4f2082
             // SDL_GetRendererOutputSize(is->renderer, &w, &h);
             // printf("screen size (%d,%d)\n", w, h);
             is->is_fullscreen = FALSE;
@@ -171,7 +179,11 @@ gboolean unmap_event(GtkWidget *widget, GdkEvent *event, gpointer user_data)
 GtkWidget *create_gtkwindow(void *data) {
    VideoState *is = (VideoState *)data;
    GtkWidget *box;
+<<<<<<< HEAD
    //GtkWidget *statusbar;
+=======
+   GtkWidget *statusbar;
+>>>>>>> 02daf5209c9a9b70d5c80abb00524633ce4f2082
    is->sdl_socket = gtk_drawing_area_new();
    is->gtkwindow = gtk_window_new(GTK_WINDOW_TOPLEVEL);
    gtk_window_set_position(GTK_WINDOW(is->gtkwindow), GTK_WIN_POS_CENTER);
@@ -193,8 +205,12 @@ GtkWidget *create_gtkwindow(void *data) {
                     G_CALLBACK(configure_event), data);
    gtk_widget_show_all(is->gtkwindow);
    // gtk_main ();
+<<<<<<< HEAD
     return gtkwindow;
    
+=======
+   // return gtkwindow;
+>>>>>>> 02daf5209c9a9b70d5c80abb00524633ce4f2082
 }
 
 void packet_queue_init(PacketQueue *q) {
@@ -490,9 +506,15 @@ void video_display(VideoState *is) {
 
    SDL_Rect rect;
    VideoPicture *vp;
+<<<<<<< HEAD
    //float aspect_ratio;
    // int w, h, x, y;
    //int texture_w, texture_h;
+=======
+   float aspect_ratio;
+   // int w, h, x, y;
+   int texture_w, texture_h;
+>>>>>>> 02daf5209c9a9b70d5c80abb00524633ce4f2082
    while ((!is->renderer || !is->texture) && !is->quit) {
       SDL_Delay(10);
       continue;
@@ -536,9 +558,15 @@ void video_display(VideoState *is) {
          if (ret == -1) {
             printf("Update Texture error:%s\n", SDL_GetError());
          }
+<<<<<<< HEAD
          //int w, h;
          //SDL_GetWindowSize(is->win, &w, &h);
          //printf("Window size:(%d,%d))\n", w, h);
+=======
+         int w, h;
+         SDL_GetWindowSize(is->win, &w, &h);
+         printf("Window size:(%d,%d))\n", w, h);
+>>>>>>> 02daf5209c9a9b70d5c80abb00524633ce4f2082
          // SDL_Surface *w_sur = SDL_GetWindowSurface(is->win);
          ret = SDL_RenderClear(is->renderer);
          // SDL_SetRenderDrawColor(is->renderer, 255, 0, 0, 255);
@@ -639,7 +667,11 @@ void video_refresh_timer(void *userdata) {
 int queue_picture(VideoState *is, AVFrame *pFrame, double pts) {
 
    int dst_pix_fmt;
+<<<<<<< HEAD
    //AVPicture pict;
+=======
+   AVPicture pict;
+>>>>>>> 02daf5209c9a9b70d5c80abb00524633ce4f2082
    VideoPicture *vp;
    /* wait until we have space for a new pic */
    SDL_LockMutex(is->pictq_mutex);
@@ -891,7 +923,10 @@ int stream_component_open(VideoState *is, int stream_index) {
       default:
          break;
    }
+<<<<<<< HEAD
    return 0;
+=======
+>>>>>>> 02daf5209c9a9b70d5c80abb00524633ce4f2082
 }
 
 int decode_interrupt_cb(void *data) {
