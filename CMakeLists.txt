@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 project(test)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${test_SOURCE_DIR}/cmake")
-set(CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++ -std=c++11 -Wall -pg -p")
+set(CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++ -std=c++11 -Wall -pg -p -no-integrated-as")
 SET(CMAKE_EXE_LINKER_FLAGS  "-lc++ -lc++abi" )
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
    message("Using Clang")
