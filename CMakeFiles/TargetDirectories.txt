@@ -1,0 +1,5 @@
+/home/pikachu123/SDL_example/src/ex1/CMakeFiles/HelloWorld.dir
+/home/pikachu123/SDL_example/src/ex5/CMakeFiles/Syncvideo.dir
+/home/pikachu123/SDL_example/src/ex4/CMakeFiles/Videothread.dir
+/home/pikachu123/SDL_example/src/gtk/CMakeFiles/gtk_ex.dir
+/home/pikachu123/SDL_example/src/gtk/CMakeFiles/gtk_ex1.dir
