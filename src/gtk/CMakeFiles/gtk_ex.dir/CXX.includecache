@@ -6,8 +6,6 @@
 
 #IncludeRegexTransform: 
 
-<<<<<<< HEAD
-=======
 /home/pikachu123/SDL_example/src/common/constant.h
 
 /home/pikachu123/SDL_example/src/gtk/HelloWorld2.cpp
@@ -848,4 +846,3 @@ libavutil/pixfmt.h
 version.h
 /home/pikachu123/ffmpeg_build/include/libswscale/version.h
 
->>>>>>> 02daf5209c9a9b70d5c80abb00524633ce4f2082

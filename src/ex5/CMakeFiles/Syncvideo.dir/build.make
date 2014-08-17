@@ -56,7 +56,6 @@ src/ex5/CMakeFiles/Syncvideo.dir/sync_video.cpp.o: src/ex5/CMakeFiles/Syncvideo.
 src/ex5/CMakeFiles/Syncvideo.dir/sync_video.cpp.o: src/ex5/sync_video.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/ex5/CMakeFiles/Syncvideo.dir/sync_video.cpp.o"
-<<<<<<< HEAD
 	cd /home/pikachu123/SDL_example/src/ex5 && /usr/local/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Syncvideo.dir/sync_video.cpp.o -c /home/pikachu123/SDL_example/src/ex5/sync_video.cpp
 
 src/ex5/CMakeFiles/Syncvideo.dir/sync_video.cpp.i: cmake_force
@@ -66,17 +65,6 @@ src/ex5/CMakeFiles/Syncvideo.dir/sync_video.cpp.i: cmake_force
 src/ex5/CMakeFiles/Syncvideo.dir/sync_video.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Syncvideo.dir/sync_video.cpp.s"
 	cd /home/pikachu123/SDL_example/src/ex5 && /usr/local/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/pikachu123/SDL_example/src/ex5/sync_video.cpp -o CMakeFiles/Syncvideo.dir/sync_video.cpp.s
-=======
-	cd /home/pikachu123/SDL_example/src/ex5 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Syncvideo.dir/sync_video.cpp.o -c /home/pikachu123/SDL_example/src/ex5/sync_video.cpp
-
-src/ex5/CMakeFiles/Syncvideo.dir/sync_video.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Syncvideo.dir/sync_video.cpp.i"
-	cd /home/pikachu123/SDL_example/src/ex5 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/pikachu123/SDL_example/src/ex5/sync_video.cpp > CMakeFiles/Syncvideo.dir/sync_video.cpp.i
-
-src/ex5/CMakeFiles/Syncvideo.dir/sync_video.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Syncvideo.dir/sync_video.cpp.s"
-	cd /home/pikachu123/SDL_example/src/ex5 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/pikachu123/SDL_example/src/ex5/sync_video.cpp -o CMakeFiles/Syncvideo.dir/sync_video.cpp.s
->>>>>>> 02daf5209c9a9b70d5c80abb00524633ce4f2082
 
 src/ex5/CMakeFiles/Syncvideo.dir/sync_video.cpp.o.requires:
 .PHONY : src/ex5/CMakeFiles/Syncvideo.dir/sync_video.cpp.o.requires
@@ -108,12 +96,12 @@ bin/Syncvideo: /home/pikachu123/ffmpeg_build/lib/libx264.so
 bin/Syncvideo: /home/pikachu123/ffmpeg_build/lib/libvpx.so
 bin/Syncvideo: /home/pikachu123/ffmpeg_build/lib/libopus.so
 bin/Syncvideo: /home/pikachu123/ffmpeg_build/lib/libmp3lame.so
-bin/Syncvideo: /usr/lib64/libogg.so
-bin/Syncvideo: /usr/lib64/libvorbisfile.so
+bin/Syncvideo: /home/pikachu123/ffmpeg_build/lib/libogg.so
+bin/Syncvideo: /home/pikachu123/ffmpeg_build/lib/libvorbisfile.so
 bin/Syncvideo: /home/pikachu123/ffmpeg_build/lib/libfdk-aac.so
 bin/Syncvideo: /home/pikachu123/ffmpeg_build/lib/libpostproc.so
-bin/Syncvideo: /usr/lib64/libvorbisenc.so
-bin/Syncvideo: /usr/lib64/libvorbis.so
+bin/Syncvideo: /home/pikachu123/ffmpeg_build/lib/libvorbisenc.so
+bin/Syncvideo: /home/pikachu123/ffmpeg_build/lib/libvorbis.so
 bin/Syncvideo: src/ex5/CMakeFiles/Syncvideo.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../../bin/Syncvideo"
 	cd /home/pikachu123/SDL_example/src/ex5 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Syncvideo.dir/link.txt --verbose=$(VERBOSE)

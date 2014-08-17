@@ -56,7 +56,6 @@ src/gtk/CMakeFiles/gtk_ex1.dir/main.cpp.o: src/gtk/CMakeFiles/gtk_ex1.dir/flags.
 src/gtk/CMakeFiles/gtk_ex1.dir/main.cpp.o: src/gtk/main.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/gtk/CMakeFiles/gtk_ex1.dir/main.cpp.o"
-<<<<<<< HEAD
 	cd /home/pikachu123/SDL_example/src/gtk && /usr/local/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gtk_ex1.dir/main.cpp.o -c /home/pikachu123/SDL_example/src/gtk/main.cpp
 
 src/gtk/CMakeFiles/gtk_ex1.dir/main.cpp.i: cmake_force
@@ -66,17 +65,6 @@ src/gtk/CMakeFiles/gtk_ex1.dir/main.cpp.i: cmake_force
 src/gtk/CMakeFiles/gtk_ex1.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gtk_ex1.dir/main.cpp.s"
 	cd /home/pikachu123/SDL_example/src/gtk && /usr/local/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/pikachu123/SDL_example/src/gtk/main.cpp -o CMakeFiles/gtk_ex1.dir/main.cpp.s
-=======
-	cd /home/pikachu123/SDL_example/src/gtk && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gtk_ex1.dir/main.cpp.o -c /home/pikachu123/SDL_example/src/gtk/main.cpp
-
-src/gtk/CMakeFiles/gtk_ex1.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gtk_ex1.dir/main.cpp.i"
-	cd /home/pikachu123/SDL_example/src/gtk && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/pikachu123/SDL_example/src/gtk/main.cpp > CMakeFiles/gtk_ex1.dir/main.cpp.i
-
-src/gtk/CMakeFiles/gtk_ex1.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gtk_ex1.dir/main.cpp.s"
-	cd /home/pikachu123/SDL_example/src/gtk && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/pikachu123/SDL_example/src/gtk/main.cpp -o CMakeFiles/gtk_ex1.dir/main.cpp.s
->>>>>>> 02daf5209c9a9b70d5c80abb00524633ce4f2082
 
 src/gtk/CMakeFiles/gtk_ex1.dir/main.cpp.o.requires:
 .PHONY : src/gtk/CMakeFiles/gtk_ex1.dir/main.cpp.o.requires
@@ -108,12 +96,12 @@ bin/gtk_ex1: /home/pikachu123/ffmpeg_build/lib/libx264.so
 bin/gtk_ex1: /home/pikachu123/ffmpeg_build/lib/libvpx.so
 bin/gtk_ex1: /home/pikachu123/ffmpeg_build/lib/libopus.so
 bin/gtk_ex1: /home/pikachu123/ffmpeg_build/lib/libmp3lame.so
-bin/gtk_ex1: /usr/lib64/libogg.so
-bin/gtk_ex1: /usr/lib64/libvorbisfile.so
+bin/gtk_ex1: /home/pikachu123/ffmpeg_build/lib/libogg.so
+bin/gtk_ex1: /home/pikachu123/ffmpeg_build/lib/libvorbisfile.so
 bin/gtk_ex1: /home/pikachu123/ffmpeg_build/lib/libfdk-aac.so
 bin/gtk_ex1: /home/pikachu123/ffmpeg_build/lib/libpostproc.so
-bin/gtk_ex1: /usr/lib64/libvorbisenc.so
-bin/gtk_ex1: /usr/lib64/libvorbis.so
+bin/gtk_ex1: /home/pikachu123/ffmpeg_build/lib/libvorbisenc.so
+bin/gtk_ex1: /home/pikachu123/ffmpeg_build/lib/libvorbis.so
 bin/gtk_ex1: /usr/lib64/libSM.so
 bin/gtk_ex1: /usr/lib64/libICE.so
 bin/gtk_ex1: /usr/lib64/libX11.so

@@ -56,7 +56,6 @@ src/ex1/CMakeFiles/HelloWorld.dir/HelloWorld.cpp.o: src/ex1/CMakeFiles/HelloWorl
 src/ex1/CMakeFiles/HelloWorld.dir/HelloWorld.cpp.o: src/ex1/HelloWorld.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/pikachu123/SDL_example/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/ex1/CMakeFiles/HelloWorld.dir/HelloWorld.cpp.o"
-<<<<<<< HEAD
 	cd /home/pikachu123/SDL_example/src/ex1 && /usr/local/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/HelloWorld.dir/HelloWorld.cpp.o -c /home/pikachu123/SDL_example/src/ex1/HelloWorld.cpp
 
 src/ex1/CMakeFiles/HelloWorld.dir/HelloWorld.cpp.i: cmake_force
@@ -66,17 +65,6 @@ src/ex1/CMakeFiles/HelloWorld.dir/HelloWorld.cpp.i: cmake_force
 src/ex1/CMakeFiles/HelloWorld.dir/HelloWorld.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HelloWorld.dir/HelloWorld.cpp.s"
 	cd /home/pikachu123/SDL_example/src/ex1 && /usr/local/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/pikachu123/SDL_example/src/ex1/HelloWorld.cpp -o CMakeFiles/HelloWorld.dir/HelloWorld.cpp.s
-=======
-	cd /home/pikachu123/SDL_example/src/ex1 && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/HelloWorld.dir/HelloWorld.cpp.o -c /home/pikachu123/SDL_example/src/ex1/HelloWorld.cpp
-
-src/ex1/CMakeFiles/HelloWorld.dir/HelloWorld.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HelloWorld.dir/HelloWorld.cpp.i"
-	cd /home/pikachu123/SDL_example/src/ex1 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/pikachu123/SDL_example/src/ex1/HelloWorld.cpp > CMakeFiles/HelloWorld.dir/HelloWorld.cpp.i
-
-src/ex1/CMakeFiles/HelloWorld.dir/HelloWorld.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HelloWorld.dir/HelloWorld.cpp.s"
-	cd /home/pikachu123/SDL_example/src/ex1 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/pikachu123/SDL_example/src/ex1/HelloWorld.cpp -o CMakeFiles/HelloWorld.dir/HelloWorld.cpp.s
->>>>>>> 02daf5209c9a9b70d5c80abb00524633ce4f2082
 
 src/ex1/CMakeFiles/HelloWorld.dir/HelloWorld.cpp.o.requires:
 .PHONY : src/ex1/CMakeFiles/HelloWorld.dir/HelloWorld.cpp.o.requires
@@ -108,12 +96,12 @@ bin/HelloWorld: /home/pikachu123/ffmpeg_build/lib/libx264.so
 bin/HelloWorld: /home/pikachu123/ffmpeg_build/lib/libvpx.so
 bin/HelloWorld: /home/pikachu123/ffmpeg_build/lib/libopus.so
 bin/HelloWorld: /home/pikachu123/ffmpeg_build/lib/libmp3lame.so
-bin/HelloWorld: /usr/lib64/libogg.so
-bin/HelloWorld: /usr/lib64/libvorbisfile.so
+bin/HelloWorld: /home/pikachu123/ffmpeg_build/lib/libogg.so
+bin/HelloWorld: /home/pikachu123/ffmpeg_build/lib/libvorbisfile.so
 bin/HelloWorld: /home/pikachu123/ffmpeg_build/lib/libfdk-aac.so
 bin/HelloWorld: /home/pikachu123/ffmpeg_build/lib/libpostproc.so
-bin/HelloWorld: /usr/lib64/libvorbisenc.so
-bin/HelloWorld: /usr/lib64/libvorbis.so
+bin/HelloWorld: /home/pikachu123/ffmpeg_build/lib/libvorbisenc.so
+bin/HelloWorld: /home/pikachu123/ffmpeg_build/lib/libvorbis.so
 bin/HelloWorld: src/ex1/CMakeFiles/HelloWorld.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../../bin/HelloWorld"
 	cd /home/pikachu123/SDL_example/src/ex1 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HelloWorld.dir/link.txt --verbose=$(VERBOSE)

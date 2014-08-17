@@ -30,17 +30,16 @@ void clicked(GtkWidget *widget, GdkEventKey *event, gpointer data) {
       if (!full) {
          gtk_window_fullscreen(GTK_WINDOW(gtkwindow));
          int w, h;
-         
+
          SDL_GetRendererOutputSize(renderer, &w, &h);
-      //SDL_DestroyRenderer(renderer);
-      //SDL_DestroyTexture(texture);
-      //SDL_CreateRenderer(sdl_window,-1,1);
-      //texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_YV12,
-      //                            SDL_TEXTUREACCESS_STREAMING,1000,700);
+         // SDL_DestroyRenderer(renderer);
+         // SDL_DestroyTexture(texture);
+         // SDL_CreateRenderer(sdl_window,-1,1);
+         // texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_YV12,
+         //                            SDL_TEXTUREACCESS_STREAMING,1000,700);
          printf("screen size (%d,%d)\n", w, h);
          full = TRUE;
       } else {
-
          gtk_window_unfullscreen(GTK_WINDOW(gtkwindow));
          int w, h;
          SDL_GetRendererOutputSize(renderer, &w, &h);
@@ -73,11 +72,10 @@ static void DestroyWindowX11(void *window) {
 void exit() {
    done = 0;
    printf("QUIT!!!!\n");
-   //SDL_Quit();
+   // SDL_Quit();
 }
-void configure_event(GtkWindow *window, GdkEvent *event, gpointer data) 
-{
-   SDL_SetWindowSize(win,event->configure.width,event->configure.height);
+void configure_event(GtkWindow *window, GdkEvent *event, gpointer data) {
+   SDL_SetWindowSize(win, event->configure.width, event->configure.height);
 }
 GtkWidget *create_gtkwindow() {
    GtkWidget *box;
@@ -92,48 +90,17 @@ GtkWidget *create_gtkwindow() {
    // statusbar = gtk_statusbar_new();
    gtk_box_pack_start(GTK_BOX(box), sdl_socket, TRUE, TRUE, 0);
    // gtk_box_pack_start(GTK_BOX(box), statusbar, FALSE, FALSE, 0);
-   g_signal_connect_swapped(G_OBJECT(gtkwindow), "destroy", G_CALLBACK(exit),
-                            NULL);
-   g_signal_connect(G_OBJECT(gtkwindow), "configure_event",
-                    G_CALLBACK(configure_event), 0);
-   g_signal_connect(G_OBJECT(gtkwindow), "button-press-event",
-                    G_CALLBACK(clicked), NULL);
+   //g_signal_connect_swapped(G_OBJECT(gtkwindow), "destroy", G_CALLBACK(exit),
+   //                         NULL);
+   //g_signal_connect(G_OBJECT(gtkwindow), "configure_event",
+   //                 G_CALLBACK(configure_event), 0);
+   //g_signal_connect(G_OBJECT(gtkwindow), "button-press-event",
+   //                 G_CALLBACK(clicked), NULL);
    gtk_widget_show_all(gtkwindow);
 
    return gtkwindow;
 }
-int test_thread(void *data) {
-   while (done) {
-
-      while (gtk_events_pending()) {
-         gtk_main_iteration_do(FALSE);
-      }
-      // printf("test\n");
-      SDL_Rect rect;
-      rect.x = 0;
-      rect.y = 0;
-      rect.w = 800;
-      rect.h = 600;
-      SDL_RenderClear(renderer);
-
-      SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
-      SDL_RenderCopy(renderer, texture, &rect,NULL);
-      SDL_RenderPresent(renderer);
-      // SDL_FillRect(screensurface, NULL,
-      //             SDL_MapRGB(screensurface->format, 255, 0, 0));
-      // SDL_UpdateWindowSurface(window);
-      while (SDL_PollEvent(&event)) {
-         switch (event.type) {
-            case SDL_QUIT:
-               printf("SDL Quit\n");
-               done = 1;
-               break;
-            default:
-               break;
-         }
-      }
-   }
-}
+int test_thread(void *data) {}
 int main(int argc, char *argv[]) {
    int width, height;
    Uint8 *keys;
@@ -232,16 +199,43 @@ int main(int argc, char *argv[]) {
    //      break;
    //}
    // printf("screensurface format:%d\n",pix_format);
-   texture = SDL_CreateTextureFromSurface(renderer,SDL_LoadBMP("test.bmp"));                                           
-   //texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_YV12,
+   texture = SDL_CreateTextureFromSurface(renderer, SDL_LoadBMP("test.bmp"));
+   // texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_YV12,
    //                            SDL_TEXTUREACCESS_STATIC, 800, 600);
 
-    if(!texture)
-   {
+   if (!texture) {
       printf("Create Texture failed!!\n");
    }
    printf("init SDL Video finished!!\n");
-   SDL_Thread* threadID = SDL_CreateThread(test_thread, "test", NULL);
-   int threadReturnValue;
-   SDL_WaitThread(threadID,&threadReturnValue);
+   while (done) {
+      while (gtk_events_pending()) {
+         gtk_main_iteration_do(FALSE);
+      }
+      // printf("test\n");
+      SDL_Rect rect;
+      rect.x = 0;
+      rect.y = 0;
+      rect.w = 800;
+      rect.h = 600;
+      SDL_RenderClear(renderer);
+
+      SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
+      SDL_RenderCopy(renderer, texture, &rect, NULL);
+      SDL_RenderPresent(renderer);
+      // SDL_FillRect(screensurface, NULL,
+      //             SDL_MapRGB(screensurface->format, 255, 0, 0));
+      // SDL_UpdateWindowSurface(window);
+      while (SDL_PollEvent(&event)) {
+         switch (event.type) {
+            case SDL_KEYDOWN:
+               printf("Key Down");
+            case SDL_QUIT:
+               printf("SDL Quit\n");
+               done = 1;
+               break;
+            default:
+               break;
+         }
+      }
+   }
 }

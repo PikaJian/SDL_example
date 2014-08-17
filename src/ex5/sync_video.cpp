@@ -1,17 +1,4 @@
 #include "../common/constant.h"
-#ifdef __cplusplus
-extern "C" {
-#endif
-#include <libavcodec/avcodec.h>
-#include <libavformat/avformat.h>
-#include <libswscale/swscale.h>
-#include <libswresample/swresample.h>
-#include <libavutil/avstring.h>
-#include <libavutil/time.h>
-#ifdef __cplusplus
-}
-
-#endif
 #include <iostream>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_thread.h>
@@ -23,9 +10,22 @@ extern "C" {
 #include <assert.h>
 #include <time.h>
 #include <math.h>
-
+#ifdef NATIVE_WINDOW
 #include <gtk-3.0/gtk/gtk.h>
 #include <gtk-3.0/gdk/gdkx.h>
+#endif
+#ifdef __cplusplus
+extern "C" {
+#endif
+#include <libavcodec/avcodec.h>
+#include <libavformat/avformat.h>
+#include <libswscale/swscale.h>
+#include <libswresample/swresample.h>
+#include <libavutil/avstring.h>
+#include <libavutil/time.h>
+#ifdef __cplusplus
+}
+#endif
 #define SDL_AUDIO_BUFFER_SIZE 1024
 #define MAX_AUDIO_FRAME_SIZE 192000
 #define QUEUE_MAX_SIZE 100
@@ -59,10 +59,12 @@ typedef struct VideoPicture {
 } VideoPicture;
 
 typedef struct VideoState {
-
+AVFrame *pFrameYUV;
    // native window use gtk
+#ifdef NATIVE_WINDOW
    GtkWidget *sdl_socket;
    GtkWidget *gtkwindow;
+#endif
    SDL_Window *win;
    SDL_Renderer *renderer;
    SDL_Texture *texture;
@@ -93,7 +95,7 @@ typedef struct VideoState {
    int quit;
    SwsContext *sws_ctx;
    SwrContext *audio_swr;
-
+   double play_time;
    double audio_clock;
    double frame_timer;
    double frame_last_pts;
@@ -106,12 +108,15 @@ typedef struct VideoState {
    can be global in case we need it. */
 VideoState *global_video_state = NULL;
 
+#ifdef NATIVE_WINDOW
 void exit() {
+   VideoState *is = global_video_state;
    global_video_state->quit = 1;
-   //SDL_QuitSubSystem(SDL_INIT_AUDIO);
+   // SDL_QuitSubSystem(SDL_INIT_AUDIO);
    // gtk_main_quit();
    // SDL_ShowWindow(window);
-   // SDL_DestroyWindow(window);
+   // SDL_DestroyWindow(window)
+   // gdk_window_hide(gtk_widget_get_window(is->sdl_socket));
    SDL_Quit();
 }
 void clicked(GtkWidget *widget, GdkEventKey *event, gpointer data) {
@@ -125,7 +130,6 @@ void clicked(GtkWidget *widget, GdkEventKey *event, gpointer data) {
 
             is->is_fullscreen = TRUE;
          } else {
-
             gtk_window_unfullscreen(GTK_WINDOW(is->gtkwindow));
             int w, h;
             is->is_fullscreen = FALSE;
@@ -142,16 +146,14 @@ void configure_event(GtkWindow *window, GdkEvent *event, gpointer data) {
 
    SDL_SetWindowSize(is->win, event->configure.width, event->configure.height);
 }
-gboolean unmap_event(GtkWidget *widget, GdkEvent *event, gpointer user_data)
-{
-   printf("unmap-event\n");
-   return FALSE;
-}
-
+//gboolean unmap_event(GtkWidget *widget, GdkEvent *event, gpointer user_data) {
+//   printf("unmap-event\n");
+//   return FALSE;
+//}
 GtkWidget *create_gtkwindow(void *data) {
    VideoState *is = (VideoState *)data;
    GtkWidget *box;
-   //GtkWidget *statusbar;
+   // GtkWidget *statusbar;
    is->sdl_socket = gtk_drawing_area_new();
    is->gtkwindow = gtk_window_new(GTK_WINDOW_TOPLEVEL);
    gtk_window_set_position(GTK_WINDOW(is->gtkwindow), GTK_WIN_POS_CENTER);
@@ -164,7 +166,8 @@ GtkWidget *create_gtkwindow(void *data) {
    // statusbar = gtk_statusbar_new();
    gtk_box_pack_start(GTK_BOX(box), is->sdl_socket, TRUE, TRUE, 0);
    // gtk_box_pack_start(GTK_BOX(box), statusbar, FALSE, FALSE, 0);
-   g_signal_connect(G_OBJECT(is->gtkwindow), "unmap-event", G_CALLBACK(unmap_event), NULL);
+   //g_signal_connect(G_OBJECT(is->gtkwindow), "unmap-event",
+   //                 G_CALLBACK(unmap_event), NULL);
    g_signal_connect_swapped(G_OBJECT(is->gtkwindow), "destroy",
                             G_CALLBACK(exit), NULL);
    g_signal_connect(G_OBJECT(is->gtkwindow), "button-press-event",
@@ -173,8 +176,46 @@ GtkWidget *create_gtkwindow(void *data) {
                     G_CALLBACK(configure_event), data);
    gtk_widget_show_all(is->gtkwindow);
    // gtk_main ();
-    return is->gtkwindow;
-   
+   return is->gtkwindow;
+}
+#endif
+void video_refresh_timer(void *);
+void on_event_test(void *data) {
+   SDL_Event event;
+   VideoState *is = (VideoState *)data;
+   SDL_WaitEvent(&event);
+   switch (event.type) {
+      case SDL_MOUSEBUTTONDOWN:
+         if (event.button.button == SDL_BUTTON_LEFT) printf("key press\n");
+         break;
+
+      case FF_QUIT_EVENT:
+      case SDL_QUIT:
+         printf("Ready to Quit!!\n");
+         SDL_LockMutex(is->pictq_mutex);
+         SDL_CondBroadcast(is->pictq_cond);
+         SDL_UnlockMutex(is->pictq_mutex);
+         SDL_LockMutex(is->audioq.mutex);
+         SDL_CondBroadcast(is->audioq.cond);
+         SDL_UnlockMutex(is->audioq.mutex);
+         SDL_LockMutex(is->videoq.mutex);
+         SDL_CondBroadcast(is->videoq.cond);
+         SDL_UnlockMutex(is->videoq.mutex);
+         is->quit = 1;
+         SDL_Quit();
+         return;
+         break;
+      // case FF_ALLOC_EVENT:
+      // alloc_picture(event.user.data1);
+      //   break;
+      case FF_REFRESH_EVENT:
+         // printf("refresh event!!\n");
+         video_refresh_timer(event.user.data1);
+         break;
+      default:
+         break;
+   }
+   // printf("Wait Event Endl!!\n");
 }
 
 void packet_queue_init(PacketQueue *q) {
@@ -183,7 +224,6 @@ void packet_queue_init(PacketQueue *q) {
    q->cond = SDL_CreateCond();
 }
 int packet_queue_put(PacketQueue *q, AVPacket *pkt) {
-
    AVPacketList *pkt1;
    if (av_dup_packet(pkt) < 0) {
       return -1;
@@ -214,7 +254,6 @@ static int packet_queue_get(PacketQueue *q, AVPacket *pkt, int block) {
    SDL_LockMutex(q->mutex);
 
    for (;;) {
-
       if (global_video_state->quit) {
          ret = -1;
          break;
@@ -246,10 +285,10 @@ static int packet_queue_get(PacketQueue *q, AVPacket *pkt, int block) {
 #define AUDIO_REFILL_THRESH 4096
 int audio_decode_frame(VideoState *is, uint8_t *audio_buf, int buf_size,
                        double *pts_ptr) {
-
    int len1, data_size, n;
    static AVPacket *pkt = &is->audio_pkt;
    double pts;
+   
    // uint8_t inbuf[AUDIO_INBUF_SIZE + FF_INPUT_BUFFER_PADDING_SIZE];
    AVFrame *decoded_frame = NULL;
    is->audio_pkt_size = 0;
@@ -275,7 +314,6 @@ int audio_decode_frame(VideoState *is, uint8_t *audio_buf, int buf_size,
          // is->audio_pkt_size -= len1;
 
          if (got_frame) {
-
             // update audio clock
             pts = is->audio_clock;
             *pts_ptr = pts;
@@ -289,7 +327,6 @@ int audio_decode_frame(VideoState *is, uint8_t *audio_buf, int buf_size,
                 NULL, is->audio_st->codec->channels, decoded_frame->nb_samples,
                 is->audio_st->codec->sample_fmt, 1);
             if (data_size < 0) {
-
                /* This should not occur, checking just for paranoia */
                fprintf(stderr, "Failed to calculate data size\n");
                continue;
@@ -302,7 +339,7 @@ int audio_decode_frame(VideoState *is, uint8_t *audio_buf, int buf_size,
             }
             // resample needed
             // printf("start resampel");
-            AVFrame *temp = av_frame_alloc();
+   AVFrame *temp = av_frame_alloc();
             if (is->audio_st->codec->sample_fmt != AV_SAMPLE_FMT_S16) {
                int nb_samples = decoded_frame->nb_samples;
                int channels = decoded_frame->channels;
@@ -356,6 +393,7 @@ int audio_decode_frame(VideoState *is, uint8_t *audio_buf, int buf_size,
             memcpy(audio_buf, temp->data[0], data_size);
             // printf("decode size:%d\n", data_size);
             // fwrite(temp->data[0], 1, data_size, fp);
+            av_free(temp->data[0]);
             av_free(temp);
             av_free(decoded_frame);
             return data_size;
@@ -370,7 +408,6 @@ int audio_decode_frame(VideoState *is, uint8_t *audio_buf, int buf_size,
       if (pkt->data) av_free_packet(pkt);
 
       if (is->quit) {
-
          return -1;
       }
       /* next packet */
@@ -407,7 +444,6 @@ double get_audio_clock(VideoState *is) {
    return pts;
 }
 void audio_callback(void *userdata, Uint8 *stream, int len) {
-
    VideoState *is = (VideoState *)userdata;
    int len1, audio_size;
    double pts;
@@ -467,15 +503,14 @@ static void schedule_refresh(VideoState *is, int delay) {
 }
 
 void video_display(VideoState *is) {
-
    SDL_Rect rect;
    VideoPicture *vp;
-   //float aspect_ratio;
+   // float aspect_ratio;
    // int w, h, x, y;
-   //int texture_w, texture_h;
-   //float aspect_ratio;
+   // int texture_w, texture_h;
+   // float aspect_ratio;
    // int w, h, x, y;
-   //int texture_w, texture_h;
+   // int texture_w, texture_h;
    while ((!is->renderer || !is->texture) && !is->quit) {
       SDL_Delay(10);
       continue;
@@ -511,7 +546,8 @@ void video_display(VideoState *is) {
       rect.h = is->video_st->codec->height;
       if (is->win && is->renderer && is->texture) {
          // printf("ready to present texture\n");
-         int ret = SDL_UpdateYUVTexture(
+         int ret;
+         ret = SDL_UpdateYUVTexture(
              is->texture, &rect, vp->pFrameYUV->data[0],
              vp->pFrameYUV->linesize[0], vp->pFrameYUV->data[1],
              vp->pFrameYUV->linesize[1], vp->pFrameYUV->data[2],
@@ -519,9 +555,9 @@ void video_display(VideoState *is) {
          if (ret == -1) {
             printf("Update Texture error:%s\n", SDL_GetError());
          }
-         //int w, h;
-         //SDL_GetWindowSize(is->win, &w, &h);
-         //printf("Window size:(%d,%d))\n", w, h);
+         // int w, h;
+         // SDL_GetWindowSize(is->win, &w, &h);
+         // printf("Window size:(%d,%d))\n", w, h);
          // SDL_Surface *w_sur = SDL_GetWindowSurface(is->win);
          ret = SDL_RenderClear(is->renderer);
          // SDL_SetRenderDrawColor(is->renderer, 255, 0, 0, 255);
@@ -531,15 +567,15 @@ void video_display(VideoState *is) {
       // SDL_DisplayYUVOverlay(vp->bmp, &rect);
    }
 }
-
+int count = 0;
 void video_refresh_timer(void *userdata) {
-
    VideoState *is = (VideoState *)userdata;
    VideoPicture *vp;
    double actual_delay, delay, sync_threshold, ref_clock, diff;
    if (is->video_st) {
       if (is->pictq_size == 0) {
          schedule_refresh(is, 1);
+
       } else {
          vp = &is->pictq[is->pictq_rindex];
          /*Use pts to sync*/
@@ -574,6 +610,18 @@ void video_refresh_timer(void *userdata) {
             /* Really it should skip the picture instead */
             actual_delay = 0.010;
          }
+
+         // if(fabs(floor(is->play_time+actual_delay) - floor(is->play_time)) >
+         // 0.0000001f)
+         /*if(fabs(floor(is->play_time+actual_delay) - floor(is->play_time)) >
+         0.0000001f && floor(is->play_time)< 1.0f)
+         {
+            printf("play time:%f,frames:%d\n",floor(is->play_time),count);
+            count=0;
+         }*/
+         // printf("play time:%f frames:%d\n", is->play_time, count);
+         // count++;
+         is->play_time += actual_delay;
          schedule_refresh(is, (int)(actual_delay * 1000 + 0.5));
          /* show the picture! */
          video_display(is);
@@ -620,9 +668,8 @@ void video_refresh_timer(void *userdata) {
 }*/
 
 int queue_picture(VideoState *is, AVFrame *pFrame, double pts) {
-
    int dst_pix_fmt;
-   //AVPicture pict;
+   // AVPicture pict;
    VideoPicture *vp;
    /* wait until we have space for a new pic */
    SDL_LockMutex(is->pictq_mutex);
@@ -635,8 +682,9 @@ int queue_picture(VideoState *is, AVFrame *pFrame, double pts) {
 
    // windex is set to 0 initially
    vp = &is->pictq[is->pictq_windex];
-   if (!vp->pFrameYUV) {
-      vp->pFrameYUV = av_frame_alloc();
+   if (!is->pFrameYUV) {
+      is->pFrameYUV = av_frame_alloc();
+      vp->pFrameYUV = is->pFrameYUV;
    }
    /* allocate or resize the buffer! */
    /*if(!vp->bmp ||
@@ -662,7 +710,6 @@ int queue_picture(VideoState *is, AVFrame *pFrame, double pts) {
    /* We have a place to put our picture on the queue */
    if (vp->pFrameYUV) {
       if (!is->sws_ctx) {
-
          is->sws_ctx = sws_getContext(
              is->video_st->codec->width, is->video_st->codec->height,
              is->video_st->codec->pix_fmt, is->video_st->codec->width,
@@ -682,7 +729,7 @@ int queue_picture(VideoState *is, AVFrame *pFrame, double pts) {
                         is->video_st->codec->width,
                         is->video_st->codec->height);
 
-         sws_scale(is->sws_ctx, (uint8_t const * const *)pFrame->data,
+         sws_scale(is->sws_ctx, (uint8_t const *const *)pFrame->data,
                    pFrame->linesize, 0, is->video_st->codec->height,
                    vp->pFrameYUV->data, vp->pFrameYUV->linesize);
 
@@ -702,7 +749,6 @@ int queue_picture(VideoState *is, AVFrame *pFrame, double pts) {
    return 0;
 }
 double synchronize_video(VideoState *is, AVFrame *src_frame, double pts) {
-
    double frame_delay;
 
    if (pts != 0) {
@@ -776,7 +822,6 @@ int video_thread(void *arg) {
    av_frame_unref(pic);
 }*/
 int stream_component_open(VideoState *is, int stream_index) {
-
    AVFormatContext *pFormatCtx = is->pFormatCtx;
    AVCodecContext *codecCtx;
    AVCodec *codec;
@@ -828,16 +873,21 @@ int stream_component_open(VideoState *is, int stream_index) {
          is->frame_last_delay = 40e-3;
          packet_queue_init(&is->videoq);
 
-         create_gtkwindow((void *)is);
-
          if (!is->win) {
-
+#ifdef NATIVE_WINDOW
+            create_gtkwindow((void *)is);
             is->win = SDL_CreateWindowFrom(
                 (void *)GDK_WINDOW_XID(gtk_widget_get_window(is->sdl_socket)));
-            // is->win = SDL_CreateWindow(
-            //    "Hello World!", SDL_WINDOWPOS_UNDEFINED,
-            //    SDL_WINDOWPOS_UNDEFINED, is->video_st->codec->width,
-            //    is->video_st->codec->height, 0);
+#else
+            is->win =
+                SDL_CreateWindow("An SDL2 window",         // window title
+                                 SDL_WINDOWPOS_UNDEFINED,  // initial x position
+                                 SDL_WINDOWPOS_UNDEFINED,  // initial y position
+                                 800,                      // width, in pixels
+                                 480,                      // height, in pixels
+                                 SDL_WINDOW_RESIZABLE      // flags - see below
+                                 );
+#endif
             if (is->win == NULL) {
                std::cout << "SDL_CreateWindow Error: " << SDL_GetError()
                          << std::endl;
@@ -882,7 +932,7 @@ int decode_interrupt_cb(void *data) {
 }
 
 int decode_thread(void *arg) {
-
+   printf("Deocde  Thread:%lu\n", (long int)syscall(SYS_gettid));
    VideoState *is = (VideoState *)arg;
    AVFormatContext *pFormatCtx = is->pFormatCtx;
    AVPacket pkt1, *packet = &pkt1;
@@ -943,8 +993,8 @@ int decode_thread(void *arg) {
       // seek stuff goes here
       if (is->audioq.size > MAX_AUDIOQ_SIZE ||
           is->videoq.size > MAX_VIDEOQ_SIZE)
-          // if(is->audioq.nb_packets >= 1000)
-          // if (is->videoq.nb_packets >= 1000)
+      // if(is->audioq.nb_packets >= 1000)
+      // if (is->videoq.nb_packets >= 1000)
       {
          // printf("A Queue Size:%d V Queue Size:%d\n", is->audioq.size,
          //       is->videoq.size);
@@ -963,7 +1013,6 @@ int decode_thread(void *arg) {
          continue;
       }
       if (av_read_frame(is->pFormatCtx, packet) < 0) {
-
          if (pFormatCtx->pb->error == 0) {
             printf("Read no yet!!\n");
             SDL_Delay(100);  // no error; wait for user input
@@ -1001,14 +1050,16 @@ fail:
 }
 
 int main(int argc, char *argv[]) {
-
-   SDL_Event event;
-
+   printf("Main Thread:%lu\n", (long int)syscall(SYS_gettid));
    VideoState *is;
-
+#ifdef NATIVE_WINDOW
    gtk_init(&argc, &argv);
+#endif
    is = (VideoState *)av_mallocz(sizeof(VideoState));
-
+   auto t = []() {
+      printf("test lambada\n");
+      getchar();
+   };
    if (argc < 2) {
       fprintf(stderr, "Usage: test <file>\n");
       exit(1);
@@ -1034,7 +1085,10 @@ int main(int argc, char *argv[]) {
    // Open video file
    printf("open file:%s\n", is->filename);
    if (avformat_open_input(&is->pFormatCtx, is->filename, NULL, NULL) != 0)
+   {
+      printf("file not found\n");
       return -1;  // Couldn't open file
+   }
    // printf("open file end!!!\n");
    // getchar();
    schedule_refresh(is, 40);
@@ -1043,45 +1097,18 @@ int main(int argc, char *argv[]) {
       av_free(is);
       return -1;
    }
-   // gtk_grab_remove (is->gtkwindow);
-   gtk_main_quit();
    for (;;) {
-
+// printf("eeeee\n");
+     if(is->quit)
+        break;
+#ifdef NATIVE_WINDOW
       while (gtk_events_pending()) {
          gtk_main_iteration_do(FALSE);
       }  //放到deocde_thread會使SDL當掉,可能一定要放在main thread?
-      SDL_WaitEvent(&event);
-      switch (event.type) {
-         case SDL_MOUSEBUTTONDOWN:
-            if (event.button.button == SDL_BUTTON_LEFT) printf("key press\n");
-            break;
-
-         case FF_QUIT_EVENT:
-         case SDL_QUIT:
-            printf("Ready to Quit!!\n");
-            is->quit = 1;
-            SDL_LockMutex(is->pictq_mutex);
-            SDL_CondBroadcast(is->pictq_cond);
-            SDL_UnlockMutex(is->pictq_mutex);
-            SDL_LockMutex(is->audioq.mutex);
-            SDL_CondBroadcast(is->audioq.cond);
-            SDL_UnlockMutex(is->audioq.mutex);
-            SDL_LockMutex(is->videoq.mutex);
-            SDL_CondBroadcast(is->videoq.cond);
-            SDL_UnlockMutex(is->videoq.mutex);
-            SDL_Quit();
-            return 0;
-            break;
-         // case FF_ALLOC_EVENT:
-         // alloc_picture(event.user.data1);
-         //   break;
-         case FF_REFRESH_EVENT:
-            printf("refresh event!!\n");
-            video_refresh_timer(event.user.data1);
-            break;
-         default:
-            break;
-      }
+      g_idle_add((GSourceFunc)on_event_test, is);
+#else
+      on_event_test(is);
+#endif
    }
    return 0;
 }

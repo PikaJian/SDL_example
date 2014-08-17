@@ -11,18 +11,6 @@
 /home/pikachu123/SDL_example/src/ex5/sync_video.cpp
 ../common/constant.h
 /home/pikachu123/SDL_example/src/common/constant.h
-libavcodec/avcodec.h
--
-libavformat/avformat.h
--
-libswscale/swscale.h
--
-libswresample/swresample.h
--
-libavutil/avstring.h
--
-libavutil/time.h
--
 iostream
 -
 SDL2/SDL.h
@@ -48,6 +36,18 @@ math.h
 gtk-3.0/gtk/gtk.h
 -
 gtk-3.0/gdk/gdkx.h
+-
+libavcodec/avcodec.h
+-
+libavformat/avformat.h
+-
+libswscale/swscale.h
+-
+libswresample/swresample.h
+-
+libavutil/avstring.h
+-
+libavutil/time.h
 -
 
 /home/pikachu123/ffmpeg_build/include/SDL2/SDL.h
